@@ -868,3 +868,48 @@ img { max-width: 100%; }
     font-size: 13px;
   }
 }
+
+
+/* AIRCONIC - AJUSTE FINAL DE FOTOS Y TARJETAS */
+@media (max-width: 600px) {
+  #productos .tarjetas {
+    width: 100%;
+    max-width: 360px;
+    gap: 16px;
+  }
+
+  #productos .tarjeta {
+    padding: 14px 14px 18px;
+    border-radius: 18px;
+  }
+
+  #productos .tarjeta .foto {
+    width: 100%;
+    height: 205px;
+    margin: 0 0 12px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  /* Ampliar la fotografía y reducir el margen blanco visible */
+  #productos .tarjeta .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* El Apple Watch no tiene fotografía: conservar su icono completo */
+  #productos .tarjeta .foto.reloj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #productos .tarjeta h3 { margin: 0 0 6px; }
+  #productos .tarjeta p { margin: 0 0 8px; }
+  #productos .tarjeta h4 { margin: 0; }
+  #productos .tarjeta .comprar,
+  #productos .tarjeta .no-disponible { margin-top: 12px; }
+}
