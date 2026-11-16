@@ -985,3 +985,15 @@ img { max-width: 100%; }
     display: block;
   }
 }
+
+
+/* AVISO DISCRETO DE ORIGINALIDAD EN EL PIE DE PÁGINA */
+footer .aviso-originalidad {
+  max-width: 680px;
+  margin: 10px auto 0;
+  color: #606068;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+}
