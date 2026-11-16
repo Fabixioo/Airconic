@@ -723,3 +723,187 @@ section#nosotros .redes-enlaces {
     border-radius: 16px;
     padding: 16px 28px;
 }
+
+
+/* AIRCONIC - MEJORAS PARA CELULARES Y TABLETS */
+html, body {
+  width: 100%;
+  overflow-x: clip;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    width: 100%;
+    padding: 18px 16px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 8px 16px;
+  }
+
+  nav a {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 6px 0;
+  }
+
+  .hero {
+    padding: 68px 20px 56px;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 8vw, 42px);
+    line-height: 1.12;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .contenedor {
+    padding: 40px 16px;
+  }
+
+  .contenedor h2,
+  .beneficios h2 {
+    font-size: clamp(25px, 6.5vw, 32px);
+  }
+
+  .tarjetas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .tarjeta {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .tarjeta .foto {
+    height: 220px;
+    margin-bottom: 16px;
+  }
+
+  .tarjeta .foto img {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .tarjeta h3 {
+    font-size: 20px;
+  }
+
+  .tarjeta p {
+    font-size: 14px;
+    min-height: 0;
+    line-height: 1.5;
+  }
+
+  .tarjeta h4 {
+    font-size: 20px;
+  }
+
+  .comprar,
+  .no-disponible {
+    width: 100%;
+    min-height: 44px;
+    text-align: center;
+  }
+
+  #nosotros.redes-sociales {
+    padding: 28px 16px;
+  }
+
+  #nosotros .redes-caja {
+    padding: 30px 18px;
+    border-radius: 22px;
+  }
+
+  .redes-sociales h2 {
+    font-size: 26px;
+  }
+
+  .redes-sociales p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  #nosotros .redes-enlaces {
+    width: 100%;
+    gap: 12px;
+  }
+
+  #nosotros .red-social {
+    padding: 14px 18px;
+    min-height: 48px;
+  }
+
+  .beneficios {
+    margin: 12px 16px 24px;
+    padding: 38px 18px;
+    border-radius: 24px;
+  }
+
+  .beneficios-contenedor {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .beneficio {
+    padding: 26px 20px;
+  }
+
+  footer {
+    padding: 24px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 540px) {
+  .tarjetas {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .tarjeta {
+    padding: 20px;
+  }
+
+  .tarjeta .foto {
+    height: 260px;
+  }
+
+  .tarjeta h3 {
+    font-size: 22px;
+  }
+
+  #nosotros .redes-enlaces {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #nosotros .red-social {
+    width: 100%;
+  }
+
+  .btn {
+    max-width: 100%;
+    text-align: center;
+  }
+}
