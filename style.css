@@ -725,185 +725,146 @@ section#nosotros .redes-enlaces {
 }
 
 
-/* AIRCONIC - MEJORAS PARA CELULARES Y TABLETS */
-html, body {
+/* AIRCONIC - DISEÑO MÓVIL CORREGIDO */
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+img { max-width: 100%; }
+
+/* Mantener imágenes de producto completas, sin cortes */
+.tarjeta .foto img {
   width: 100%;
-  overflow-x: clip;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.tarjeta .foto {
+  background: #fff;
 }
 
-img {
-  max-width: 100%;
+/* Botones más legibles y cómodos */
+.comprar {
+  margin-top: 12px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  background: #0071e3;
+  color: #fff;
 }
 
-@media (max-width: 768px) {
+/* Diseño para tablets */
+@media (max-width: 900px) {
+  .tarjetas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .beneficios-contenedor { grid-template-columns: 1fr; }
+}
+
+/* Diseño para celulares */
+@media (max-width: 600px) {
   header {
     position: relative;
-    width: 100%;
-    padding: 18px 16px;
     flex-direction: column;
-    gap: 14px;
+    padding: 16px;
+    gap: 12px;
+    text-align: center;
   }
-
-  .logo {
-    font-size: 25px;
-  }
-
+  .logo { font-size: 24px; }
   nav {
     width: 100%;
     justify-content: center;
-    gap: 8px 16px;
+    gap: 4px 16px;
   }
-
   nav a {
-    font-size: 14px;
-    line-height: 1.5;
-    padding: 6px 0;
+    font-size: 13px;
+    padding: 8px 0;
+    line-height: 1.4;
   }
-
   .hero {
-    padding: 68px 20px 56px;
+    padding: 52px 20px 48px;
   }
-
   .hero h1 {
-    font-size: clamp(30px, 8vw, 42px);
-    line-height: 1.12;
+    font-size: clamp(30px, 8vw, 38px);
+    line-height: 1.15;
   }
-
   .hero p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .contenedor {
-    padding: 40px 16px;
-  }
-
-  .contenedor h2,
-  .beneficios h2 {
-    font-size: clamp(25px, 6.5vw, 32px);
-  }
-
-  .tarjetas {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .tarjeta {
-    padding: 16px;
-    border-radius: 20px;
-  }
-
-  .tarjeta .foto {
-    height: 220px;
-    margin-bottom: 16px;
-  }
-
-  .tarjeta .foto img {
-    object-fit: contain;
-    object-position: center;
-  }
-
-  .tarjeta h3 {
-    font-size: 20px;
-  }
-
-  .tarjeta p {
-    font-size: 14px;
-    min-height: 0;
-    line-height: 1.5;
-  }
-
-  .tarjeta h4 {
-    font-size: 20px;
-  }
-
-  .comprar,
-  .no-disponible {
-    width: 100%;
-    min-height: 44px;
-    text-align: center;
-  }
-
-  #nosotros.redes-sociales {
-    padding: 28px 16px;
-  }
-
-  #nosotros .redes-caja {
-    padding: 30px 18px;
-    border-radius: 22px;
-  }
-
-  .redes-sociales h2 {
-    font-size: 26px;
-  }
-
-  .redes-sociales p {
     font-size: 15px;
     line-height: 1.6;
   }
-
-  #nosotros .redes-enlaces {
-    width: 100%;
-    gap: 12px;
-  }
-
-  #nosotros .red-social {
-    padding: 14px 18px;
-    min-height: 48px;
-  }
-
-  .beneficios {
-    margin: 12px 16px 24px;
+  .contenedor {
     padding: 38px 18px;
-    border-radius: 24px;
   }
-
-  .beneficios-contenedor {
-    grid-template-columns: 1fr;
-    gap: 14px;
+  .contenedor h2,
+  .beneficios h2 { font-size: 27px; }
+  .tarjetas {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 390px;
+    margin: 0 auto;
+    gap: 18px;
   }
-
-  .beneficio {
-    padding: 26px 20px;
+  .tarjeta {
+    padding: 18px;
+    border-radius: 20px;
+    gap: 0;
   }
-
-  footer {
-    padding: 24px 16px;
-    font-size: 13px;
+  .tarjeta .foto {
+    height: 195px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+  }
+  .tarjeta .foto img { object-fit: contain; }
+  .tarjeta h3 { font-size: 20px; margin-bottom: 8px; }
+  .tarjeta p {
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 0;
+    margin-bottom: 10px;
+  }
+  .tarjeta h4 {
+    font-size: 21px;
+    margin: 0;
+  }
+  .comprar, .no-disponible {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 14px;
+  }
+  #nosotros.redes-sociales { padding: 24px 16px; }
+  #nosotros .redes-caja {
+    padding: 28px 16px;
+    border-radius: 22px;
+  }
+  .redes-sociales h2 { font-size: 24px; }
+  .redes-sociales p {
+    font-size: 14px;
     line-height: 1.6;
   }
-}
-
-@media (max-width: 540px) {
-  .tarjetas {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    margin: 0 auto;
-  }
-
-  .tarjeta {
-    padding: 20px;
-  }
-
-  .tarjeta .foto {
-    height: 260px;
-  }
-
-  .tarjeta h3 {
-    font-size: 22px;
-  }
-
   #nosotros .redes-enlaces {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  #nosotros .red-social {
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
-
-  .btn {
-    max-width: 100%;
-    text-align: center;
+  #nosotros .red-social {
+    min-height: 44px;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  .beneficios {
+    margin: 12px 16px 24px;
+    padding: 34px 16px;
+    border-radius: 22px;
+  }
+  .beneficios-contenedor {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .beneficio { padding: 24px 18px; }
+  footer {
+    padding: 24px 16px;
+    line-height: 1.5;
+    font-size: 13px;
   }
 }
