@@ -933,3 +933,34 @@ img { max-width: 100%; }
     object-position: center;
   }
 }
+
+
+/* AIRCONIC - FOTO VERTICAL SIN FRANJAS LATERALES */
+@media (max-width: 600px) {
+  #productos .tarjeta .foto:not(.reloj) {
+    width: 175px;
+    max-width: 100%;
+    height: 220px;
+    margin: 0 auto 10px;
+    padding: 0;
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  #productos .tarjeta .foto:not(.reloj) img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  #productos .tarjeta {
+    padding: 12px 14px 16px;
+  }
+
+  #productos .tarjeta .foto.reloj {
+    height: 145px;
+  }
+}
