@@ -15,7 +15,7 @@ formulario.addEventListener("submit", function(event) {
     "\nCorreo: " + correo +
     "\nMensaje: " + mensaje;
 
-  const numero = "573018950253";
+  const numero = "573001373695";
 
   const enlace =
     "https://wa.me/" + numero +
